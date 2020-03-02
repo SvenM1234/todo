@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Todo list</title>
+</head>
+<body>
+    <main>
+        <div class="cont-meteor">
+        </div>
+        <div class="cont-todo">
+            <h1 class="title-todo">Todo List</h1>
+            <div class="cont-todo-list">
+                <%let i = -1; todos.forEach(function(todo){ %>
+                <article class="message is-link">
+                    <div class="message-header">
+                        <%i++ %>
+                        <div><%= todo %></div>
+                        <a href="/todo/delete/<%=i%>"><button class="delete" aria-label="delete"></button></a>
+                    </div>
+                </article>
+                <% }) %>
+            </div>
+            
+
+            <form action="/todo/create" method="POST">
+                <input class="input" type="text" name="newTodo" placeholder="entrez une tache"></input>
+                <button type="submit" class="button is-info">créer</button>
+            </form>
+        </div>
+    </main>
+    
+
+    
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
