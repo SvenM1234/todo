@@ -17,13 +17,13 @@ main{
 
 .cont-meteor{
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.meteor{
+.meteor, .meteor2{
     position: absolute;
     width: 5px;
     height: 5px;
@@ -33,8 +33,8 @@ main{
 }
 
 .cont-todo{
-    width: 500px;
-
+    width: 90vw;
+    max-width: 500px;
 }
 
 .title-todo{
