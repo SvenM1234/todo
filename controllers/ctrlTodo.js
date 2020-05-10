@@ -8,6 +8,7 @@ session = {
 
 exports.getAll = (req, res, next)=>{
 
+    console.log('yo');
     res.render('index.ejs', {todos: session.contents});
 }
 
